@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.Uri
 import com.github.pedroluis02.myocrreader1.recognition.mlkit.TextRecognizerServiceImpl
 
-class TextRecognizerController(private val context: Context) {
+class TextRecognizerController(context: Context) {
     private val service: TextRecognizerService
 
     init {
