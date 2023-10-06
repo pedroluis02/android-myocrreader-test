@@ -63,7 +63,7 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:$camerax_version"
     implementation "androidx.camera:camera-view:$camerax_version"
 
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
+    implementation "com.google.android.gms:play-services-mlkit-text-recognition:$mlkit_text_recognition_version"
 
     testImplementation "junit:junit:$junit_version"
 

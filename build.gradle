@@ -1,14 +1,15 @@
 buildscript {
     ext {
-        kotlin_version = '1.10.0'
+        kotlin_version = '1.10.1'
         kotlin_bom_version = '1.8.0'
         compose_ui_version = '1.4.3'
-        lifecycle_runtime_version = '2.6.1'
-        activity_compose_version = '1.7.1'
-        camerax_version = '1.2.2'
+        lifecycle_runtime_version = '2.6.2'
+        activity_compose_version = '1.7.2'
+        camerax_version = '1.2.3'
+        mlkit_text_recognition_version = '19.0.0'
         junit_version = '4.13.2'
         android_junit_version = '1.1.3'
-        espresso_version = '3.4.0'
+        espresso_version = '3.5.1'
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
