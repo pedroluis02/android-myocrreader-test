@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "My OCR Reader"
-include ':app'
+include(":app")
