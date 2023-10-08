@@ -54,28 +54,15 @@ dependencies {
     implementation(platform(libs.jetbrains.kotlin.bom))
 
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
+    implementation(libs.bundles.androidx.compose)
 
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-
-    implementation(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.material.icons.extended)
-
-    implementation(libs.androidx.camera.camera2)
-    implementation(libs.androidx.camera.lifecycle)
-    implementation(libs.androidx.camera.view)
+    implementation(libs.bundles.androidx.camera)
 
     implementation(libs.google.mlkit.text.recognition)
 
     //implementation 'io.github.ujizin:camposer:0.3.0'
 
-    implementation(libs.junit)
-
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.testManifest)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.bundles.androidx.test)
+    debugImplementation(libs.bundles.androidx.compose.test)
 }
