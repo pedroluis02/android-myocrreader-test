@@ -33,8 +33,8 @@ google-mlkit-text-recognition = { module = "com.google.android.gms:play-services
 
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "compose" }
+
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
 androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "compose" }
 
@@ -42,6 +42,12 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+
+[bundles]
+androidx-compose = ["androidx-activity-compose", "androidx-compose-ui", "androidx-compose-ui-tooling-preview", "androidx-compose-material", "androidx-compose-material-icons-extended"]
+androidx-camera = ["androidx-camera-camera2", "androidx-camera-lifecycle", "androidx-camera-view"]
+androidx-test = ["androidx-test-ext-junit", "androidx-test-espresso-core", "androidx-compose-ui-test-junit4"]
+androidx-compose-test = ["androidx-compose-ui-tooling", "androidx-compose-ui-testManifest"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
