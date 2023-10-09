@@ -2,6 +2,7 @@
 androidxCore = "1.10.1"
 androidxActivity = "1.7.2"
 androidxLifecycle = "2.6.2"
+androidxNavigation = "2.5.3"
 androidxCamera = "1.2.3"
 androidxTestExt = "1.1.5"
 androidxEspresso = "3.5.1"
@@ -18,6 +19,7 @@ jetbrains-kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref
 
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose" }
@@ -44,7 +46,7 @@ kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-p
 android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 
 [bundles]
-androidx-compose = ["androidx-activity-compose", "androidx-compose-ui", "androidx-compose-ui-tooling-preview", "androidx-compose-material", "androidx-compose-material-icons-extended"]
+androidx-compose = ["androidx-activity-compose", "androidx-compose-ui", "androidx-compose-ui-tooling-preview", "androidx-compose-material", "androidx-compose-material-icons-extended", "androidx-compose-navigation"]
 androidx-camera = ["androidx-camera-camera2", "androidx-camera-lifecycle", "androidx-camera-view"]
 androidx-test = ["androidx-test-ext-junit", "androidx-test-espresso-core", "androidx-compose-ui-test-junit4"]
 androidx-compose-test = ["androidx-compose-ui-tooling", "androidx-compose-ui-testManifest"]
