@@ -80,7 +80,7 @@ fun CameraView(
                     contentDescription = "Take picture",
                     tint = Color.White,
                     modifier = Modifier
-                        .size(100.dp)
+                        .size(64.dp)
                         .padding(1.dp)
                         .border(1.dp, Color.White, CircleShape)
                 )
