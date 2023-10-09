@@ -1,6 +1,5 @@
 package com.github.pedroluis02.myocrreader1.camera
 
-import android.net.Uri
 import android.util.Log
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
@@ -27,6 +26,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.net.toFile
 import java.io.File
 import java.util.concurrent.Executor
 
@@ -34,7 +34,7 @@ import java.util.concurrent.Executor
 fun CameraView(
     outputDirectory: File,
     executor: Executor,
-    onImageCaptured: (Uri) -> Unit,
+    onImageCaptured: (String) -> Unit,
     onError: (ImageCaptureException) -> Unit
 ) {
     val lensFacing = CameraSelector.LENS_FACING_BACK
@@ -70,7 +70,7 @@ fun CameraView(
                 Log.i("CameraView", "onClick")
                 val photoTaker = CameraPhotoTaker(imageCapture, executor, outputDirectory)
                 photoTaker.take(
-                    onImageCaptured = onImageCaptured,
+                    onImageCaptured = { onImageCaptured(it.toFile().path) },
                     onError = onError
                 )
             },
