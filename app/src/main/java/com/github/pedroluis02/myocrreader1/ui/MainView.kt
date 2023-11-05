@@ -22,8 +22,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.github.pedroluis02.myocrreader1.R
 import com.github.pedroluis02.myocrreader1.recognition.TextRecognizerController
 import kotlinx.coroutines.launch
 
@@ -50,7 +52,7 @@ fun MainView(navController: NavController, modifier: Modifier = Modifier) {
     Scaffold(
         topBar = {
             TopAppBar {
-                Text(text = "My ORC Reader")
+                Text(text = stringResource(id = R.string.app_name))
             }
         }
     ) {
@@ -61,12 +63,12 @@ fun MainView(navController: NavController, modifier: Modifier = Modifier) {
                 .fillMaxSize()
                 .padding(it),
         ) {
-            Text("OCR Reader", style = MaterialTheme.typography.h5)
+            Text(stringResource(id = R.string.title), style = MaterialTheme.typography.h5)
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
                 navController.navigate(MainScreenType.Camera.route)
             }) {
-                Text(text = "Open camera")
+                Text(text = stringResource(id = R.string.openCamera))
             }
 
             if (resultText.isNotEmpty()) {

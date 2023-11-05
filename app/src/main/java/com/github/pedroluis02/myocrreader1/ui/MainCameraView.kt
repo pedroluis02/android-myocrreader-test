@@ -2,7 +2,6 @@ package com.github.pedroluis02.myocrreader1.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import com.github.pedroluis02.myocrreader1.camera.CameraView
@@ -11,7 +10,7 @@ import java.util.concurrent.Executors
 private const val CAMERA_VIEW_RESULT = "camera-view.result"
 
 @Composable
-fun MainCameraView(navController: NavController, modifier: Modifier = Modifier) {
+fun MainCameraView(navController: NavController) {
     val context = LocalContext.current
     val executor = Executors.newSingleThreadExecutor()
 
