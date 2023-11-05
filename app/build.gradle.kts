@@ -56,6 +56,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.bundles.androidx.compose)
 
+    implementation(libs.accompanist.permissions)
+
     implementation(libs.bundles.androidx.camera)
 
     implementation(libs.google.mlkit.text.recognition)
