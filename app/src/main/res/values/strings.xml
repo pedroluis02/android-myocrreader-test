@@ -2,5 +2,6 @@
     <string name="app_name">My OCR Reader</string>
     <string name="title">OCR Reader</string>
 
+    <string name="takePicture">Take picture</string>
     <string name="openCamera">Open camera</string>
 </resources>

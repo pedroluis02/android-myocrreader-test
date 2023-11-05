@@ -24,9 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toFile
+import com.github.pedroluis02.myocrreader1.R
 import java.io.File
 import java.util.concurrent.Executor
 
@@ -77,7 +79,7 @@ fun CameraView(
             content = {
                 Icon(
                     imageVector = Icons.Sharp.Lens,
-                    contentDescription = "Take picture",
+                    contentDescription = stringResource(id = R.string.takePicture),
                     tint = Color.White,
                     modifier = Modifier
                         .size(64.dp)
