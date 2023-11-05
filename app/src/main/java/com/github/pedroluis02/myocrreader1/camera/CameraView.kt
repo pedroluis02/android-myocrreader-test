@@ -1,5 +1,6 @@
 package com.github.pedroluis02.myocrreader1.camera
 
+import android.Manifest
 import android.util.Log
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
@@ -29,9 +30,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toFile
 import com.github.pedroluis02.myocrreader1.R
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.google.accompanist.permissions.rememberPermissionState
 import java.io.File
 import java.util.concurrent.Executor
 
+@OptIn(ExperimentalPermissionsApi::class)
 @Composable
 fun CameraView(
     outputDirectory: File,
@@ -39,6 +43,8 @@ fun CameraView(
     onImageCaptured: (String) -> Unit,
     onError: (ImageCaptureException) -> Unit
 ) {
+    val cameraPermissionState = rememberPermissionState(permission = Manifest.permission.CAMERA)
+
     val lensFacing = CameraSelector.LENS_FACING_BACK
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -59,8 +65,8 @@ fun CameraView(
             preview,
             imageCapture
         )
-
         preview.setSurfaceProvider(previewView.surfaceProvider)
+        cameraPermissionState.launchPermissionRequest()
     }
 
     Box(contentAlignment = Alignment.BottomCenter, modifier = Modifier.fillMaxSize()) {
